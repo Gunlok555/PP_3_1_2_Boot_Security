@@ -14,8 +14,6 @@
         <th>Id</th>
         <th>Name</th>
         <th>Lastname</th>
-        <th>Age</th>
-        <th>Email</th>
         <th>Password</th>
         <th>Role</th>
     </tr>
@@ -25,8 +23,6 @@
         <td th:text="${user.getId()}"></td>
         <td th:text="${user.getName()}"></td>
         <td th:text="${user.getLastname()}"></td>
-        <td th:text="${user.getAge()}"></td>
-        <td th:text="${user.getEmail()}"></td>
         <td th:text="${user.getPassword()}"></td>
         <td th:text="${user.getRoles()}"></td>
     </tr>
@@ -34,11 +30,11 @@
 </table>
 <br>
 
-<h4><a href="/admin">Если есть права админа, то можешь перейти в Админку </a></h4>
+<h4><a href="/admin">АДМИН</a></h4>
 
 <br>
 <form method="post" name="logout" th:action="@{/logout}">
-    <input type="submit" value="Разлогиниться">
+    <input type="submit" value="ВЫХОД">
 </form>
 
 

@@ -17,8 +17,6 @@
       <th>Id</th>
       <th>Name</th>
       <th>Lastname</th>
-      <th>Age</th>
-      <th>Email</th>
       <th>Password</th>
       <th>Roles</th>
 
@@ -28,8 +26,6 @@
       <td th:utext="${user.getId()}">VALUE</td>
       <td th:utext="${user.getName()}">VALUE</td>
       <td th:utext="${user.getLastname()}">VALUE</td>
-      <td th:utext="${user.getAge()}">VALUE</td>
-      <td th:utext="${user.getEmail()}">VALUE</td>
       <td th:utext="${user.getPassword()}">VALUE</td>
       <td>
         <div th:each="role:${user.getRoles()}">[[${role.getName()}]]</div>
@@ -48,16 +44,16 @@
   </table>
   <br>
 
-  <h4><a href="/admin/newUserAdmin">Добавить пользователя</a></h4>
+  <h4><a href="/admin/newUserAdmin">ДОБАВИТЬ</a></h4>
 
 
   <hr/>
-  <a href="/user">Личная страница пользователя с правами Админа</a>
+  <a href="/user">АДМИН</a>
 
   <br/>
   <hr/>
   <form method="post" name="logout" th:action="@{/logout}">
-    <input type="submit" value="Разлогиниться">
+    <input type="submit" value="ВЫХОД">
   </form>
 </div>
 

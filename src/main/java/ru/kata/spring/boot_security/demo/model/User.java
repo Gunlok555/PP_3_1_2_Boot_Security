@@ -20,10 +20,6 @@ public class User implements UserDetails {
     private String name;
     @Column(name = "last_name")
     private String lastname;
-    @Column(name = "age")
-    private Integer age;
-    @Column(name = "email")
-    private String email;
     @Column(name = "password")
     private String password;
 
@@ -38,22 +34,11 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String name, String lastname, Integer age, String email, String password, List<Role> roles) {
+    public User(String name, String lastname, String password, List<Role> roles) {
         this.name = name;
         this.lastname = lastname;
-        this.age = age;
-        this.email = email;
         this.password = password;
         this.roles = roles;
-    }
-
-    public User(String name, String lastname, Integer age, String email, String password) {
-
-        this.name = name;
-        this.lastname = lastname;
-        this.age = age;
-        this.email = email;
-        this.password = password;
     }
 
     @Override
@@ -113,22 +98,6 @@ public class User implements UserDetails {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public void setPassword(String password) {
